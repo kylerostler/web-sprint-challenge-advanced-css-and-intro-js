@@ -244,23 +244,22 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  const newArtists = [];
-
-  // checking indexes
-  for(let i = 0; i < array.length; i++) {
-    // split " - " to separate years
-    let newYears = array[i].years.split(" - ");
-    // check what years are between 1900-2000
-    if(array[i].newYears > 1899) {
-      array = newArtists.push(array[i].name);
-    }
-  }
-  // keep track of which artists lived in those years
-  // return with names of artists in those years
-  return newArtists;
+  let newArtists = [];
+// check indexes
+for(let i = 0; i < array.length; i++){
+  let newYears = array[i].years.split(" - ");
+// keep track of which artists lived in those years
+if(newYears.includes > "1904" || newYears.includes "1907" ){
+  newArtists.push(array[i].name);
+}
+}
+// return with names of artists in those years
+return newArtists;
 }
 
- console.log('task 4', get20s(artists));
+
+
+console.log('task 4', get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -315,14 +314,17 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array) {
-  const newArray = [];
+  let newArray = [];
 // checking indexes
-// check what artists have more than 100 paintings
+for(let i = 0; i < array.length; i++){
+  // check what artists have more than 100 paintings
+  if(array[i].paintings > 100)
+  newArray.push(array[i].name);
+}
 // return an array with names of artists who have more than 100 paintings
   return newArray;
 }
-
-
+console.log('task 7', lotsOfArt(artists));
 
 /* ***** END OF TASKS ***** */
 
