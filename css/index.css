@@ -137,9 +137,16 @@ button:hover{
 
 /*mobile styles*/
 @media (max-width:500px){
+    body{
+        font-size:1rem;
+    }
     /*header and title styles*/
     nav a{
         margin:0 5% 0 5%;
+    }
+    .title-container{
+        width:100%;
+        border-bottom:1px solid black;
     }
     .title-container div{
         width:100%;
@@ -148,5 +155,16 @@ button:hover{
     .artists-container{
         flex-direction:column;
         align-items:center;
+        width:70%;
+    }
+    .artists-container a{
+        font-size:1.6rem;
+    }
+    .artist{
+        width:80%;
+    }
+    
+    img{
+        height:20rem;
     }
 }
