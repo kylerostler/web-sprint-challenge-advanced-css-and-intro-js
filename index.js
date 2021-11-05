@@ -247,11 +247,16 @@ function get20s(array) {
   let newArtists = [];
 // check indexes
 for(let i = 0; i < array.length; i++){
-  let newYears = array[i].years.split(" - ");
 // keep track of which artists lived in those years
-if(newYears.includes > "1904" || newYears.includes "1907" ){
-  newArtists.push(array[i].name);
-}
+  let newYears = array[i];
+  while(newYears.includes(" - ")) {
+    let space = newYears.indexof(' - ');
+    newYears = newYears.split(space);
+    newArtists.push(array[i].name);
+  }
+// if(newYears.includes ("1904") || newYears.includes ("1907") ){
+//   newArtists.push(array[i].name);
+// }
 }
 // return with names of artists in those years
 return newArtists;
