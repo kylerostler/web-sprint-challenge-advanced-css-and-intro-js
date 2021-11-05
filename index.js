@@ -209,6 +209,7 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 console.log('task 1a', artists[0].name);
+// console.log(artists.length);
 
 //(2) Bio of the third artist (2nd index) in the array 
 console.log('task 1b', artists[2].bio);
@@ -243,19 +244,32 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
+// array[i].years.includes("1904") || array[i].years.includes("1907"
+
 function get20s(array) {
   let newArtists = [];
+  const newDates = array[0].years.split(' - ');
+  // console.log(newDates[0]);
+  // console.log(newDates[1]);
 // check indexes
 for(let i = 0; i < array.length; i++){
+  const newDates = array[0].years.split(' - ');
+  var firstDate = newDates[0];
+  var lastDate = newDates[1];
+  console.log(firstDate, lastDate);
+  // var firstDateNum = parseint(firstDate);
+  // lastDate = number("lastDate");
+  // const firstDate = newDates.number(newDates[0]);
+  // const lastDate = newDates.number(newDates[1]);
+
+  if(firstDate > 1899 && lastDate < 2001 ){
 // keep track of which artists lived in those years
-if(array[i].years.includes("1904") || array[i].years.includes("1907")){
   newArtists.push(array[i].name);
-}
+  }
 }
  //  return with names of artists in those years
  return newArtists;
 }
-
 
 console.log('task 4', get20s(artists));
 
