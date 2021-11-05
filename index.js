@@ -253,14 +253,19 @@ function get20s(array) {
   // console.log(newDates[1]);
 // check indexes
 for(let i = 0; i < array.length; i++){
-  const newDates = array[0].years.split(' - ');
-  var firstDate = newDates[0];
-  var lastDate = newDates[1];
+  const newDates = array[i].years.split(' - ');
+
+  var firstDate = Number(newDates[0]);
+  var lastDate = Number(newDates[1]);
+  // let num1 = Number.firstDate;
+  // console.log(num1);
+  // firstDate = firstDate.number();
+  // lastDate = lastDate.number();
   console.log(firstDate, lastDate);
   // var firstDateNum = parseint(firstDate);
   // lastDate = number("lastDate");
-  // const firstDate = newDates.number(newDates[0]);
-  // const lastDate = newDates.number(newDates[1]);
+  // const firstDate = number(newDates[0]);
+  // const lastDate = number(newDates[1]);
 
   if(firstDate > 1899 && lastDate < 2001 ){
 // keep track of which artists lived in those years
