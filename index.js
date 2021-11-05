@@ -247,14 +247,14 @@ function get20s(array) {
   let newArtists = [];
 // check indexes
 for(let i = 0; i < array.length; i++){
-  }if(array[i].years.includes("1907") || array[i].years.includes("1904")){
-    newArtists.push(array[i].name);
-  }
-  // return with names of artists in those years
-return newArtists;
+// keep track of which artists lived in those years
+if(array[i].years.includes("1904") || array[i].years.includes("1907")){
+  newArtists.push(array[i].name);
 }
-
-
+}
+ //  return with names of artists in those years
+ return newArtists;
+}
 
 
 console.log('task 4', get20s(artists));
